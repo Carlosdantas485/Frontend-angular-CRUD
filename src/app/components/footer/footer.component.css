@@ -1,0 +1,15 @@
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(109, 109, 109);
+    color: white;
+    padding: 5px;
+}
+
+/*============== Footer ================*/
+.list-footer{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}

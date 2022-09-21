@@ -1,0 +1,64 @@
+.header-content{
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #7AC73C;
+    color: white;
+}
+
+/*============= search =============*/
+.serach-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input{
+    height: 30px;
+}
+
+/*============= User ==============*/
+.exeple-people{
+    display: flex;
+}
+
+.user-reader{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 10px;
+}
+
+.info-user-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+a{
+    color: white;
+
+}
+
+.img-people{
+    width: 50px;
+    height: 50px;
+    border-radius:50% ;
+    margin: 10px;
+    border: 2px solid #015085;
+    padding: 2px;
+}
+
+.btn-exit{
+    background-color: red;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+}

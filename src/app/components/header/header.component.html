@@ -1,0 +1,21 @@
+<div class="header-content">
+    <h1>CRUD COMPLETO</h1>
+    <div class="user-reader" *ngIf="loginValid; else loginNotValid">
+        <div class="info-user-header">
+            <p>{{userName}}</p>
+            <a href="">Editar usuário</a>
+        </div>
+        <img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVcnWgn3s6Z_ZzIX59q7YdvcSq11QeotrmLw&usqp=CAU" alt="" class="img-people">
+        <a href="">
+            <button class="btn-exit">Sair</button>
+        </a>
+    </div>
+    <ng-template #loginNotValid>
+        <div class="exeple-people">
+            <div class="info-user-header">
+                <p>exemplo@exemplo.com</p>
+            </div>
+            <img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVcnWgn3s6Z_ZzIX59q7YdvcSq11QeotrmLw&usqp=CAU" alt="" class="img-people">
+        </div>
+    </ng-template>
+</div>

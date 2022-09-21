@@ -1,0 +1,82 @@
+
+
+.search{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-user-field{
+    margin-top: 10px;
+    width: 100%;
+}
+
+.search-user{
+    width: 100%;
+}
+.user-list{
+    display: flex;
+    flex-direction: column;
+}
+.user-card{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.info-user-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.actios-user{
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+}
+
+/*================ Modal ==================*/
+
+.modal{
+    position: fixed;
+    top: 0;
+    background-color: rgba(70, 70, 70, 0.651);
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-modal{
+    max-width: 600px;
+    max-height: 500px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 11px 3px rgba(0,0,0,0.52);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.actions-modal{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-info-user{
+    margin: 20px 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

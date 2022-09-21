@@ -1,1 +1,61 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+button{
+    width: 150px;
+    height: 40px;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover{
+    transform: scale(1.02);
+    transition: 0.5s;
+}
+.green{
+    background-color: #7AC73C;
+    color: white;
+}
+
+.red{
+    background-color: rgb(243, 102, 102);
+    color: white;
+
+}
+
+.view{
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+}
+
+.content-view{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #015085;
+    padding: 2px;
+}
+
+.form{
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

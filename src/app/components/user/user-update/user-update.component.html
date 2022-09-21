@@ -1,0 +1,49 @@
+<div class="view">
+
+    <div class="content-view">
+        <mat-card-title>
+            Alterar Usuário
+        </mat-card-title>
+        <mat-card class="card-user">
+            <img #nophoto src="{{user.url}}" alt="" class="img-user">
+            <div>
+                <p>Nome:{{user.userName}}</p>
+                <p>CPF:{{user.cpf}}</p>
+                <p>Telefone:{{user.phone}}</p>
+                <p>Saldo:{{user.balance}}</p>
+            </div>
+        </mat-card>
+        <form action="" class="form">
+            <mat-form-field>
+                <input matInput placeholder="Nome"[(ngModel)]="user.userName" name="name" >
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Senha" [(ngModel)]="user.password" name="password" pattern="(?=(.*[0-9]))(?=.*[A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z])^.{8,}$">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Senha" [(ngModel)]="user.rePassword" name="rePassword">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="CPF" [(ngModel)]="user.cpf" name="cpf">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Telefone" [(ngModel)]="user.phone" name="phone">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Saldo" [(ngModel)]="user.balance" name="balance">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="(URL) Foto" [(ngModel)]="user.url" name="url">
+            </mat-form-field>
+            <div class="options-to-update">
+                <button  mat-raised-button (click)="update()" color="primary">Confirmar</button>
+                <button mat-raised-button (click)="cancel()" color="warn">Cancelar</button>
+            </div>
+            
+        </form>
+            
+    </div>
+    
+</div>
+
+

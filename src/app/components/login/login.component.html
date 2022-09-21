@@ -1,0 +1,15 @@
+<div class="login-content">
+    <form class="form-login" [formGroup]="profileForm" (ngSubmit)="loginUser()">
+        <mat-card-title>
+            <h1>Login</h1>
+        </mat-card-title>
+        <mat-form-field>
+            <input matInput name="userName" placeholder="Usuário" formControlName="userName" pattern="(?=(.*[0-9]))(?=.*[A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z])^.{8,}$">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="text" placeholder="Senha">
+        </mat-form-field>
+        <button class="green" type="submit">Save</button>
+    </form>
+</div>
+    

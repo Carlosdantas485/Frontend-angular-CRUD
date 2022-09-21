@@ -1,0 +1,57 @@
+<div class="view">
+    <div class="content-view">
+        <h1>Usuários</h1>
+        <a href="/users/create">
+            <button class="green">Novo Usuário</button>
+        </a>
+        <div class="search">
+            <mat-form-field class="search-user-field">
+                <input class="search-user" matInput type="text" placeholder="Buscar por nome ">
+            </mat-form-field>
+        </div>
+        <ul class="user-list" *ngFor="let user of users">
+            <mat-card class="user-card">
+                <img class="img" src="{{user.url}}" alt="">
+                <div class="info-user-card">
+                    <p>{{user.userName}}</p>
+                    <p>{{user.phone}}</p>
+                    <p>{{user.cpf}}</p>
+                    <p>{{user.balance}}</p>
+                </div>
+                <div class="actios-user">
+                    <a routerLink="update/{{ user.id }}" class="edit">
+                        <i class="material-icons ">
+                            edit
+                        </i>
+                    </a>
+                    <a routerLink="delete/{{ user.id }}" class="delete">
+                        <i class="material-icons delete">
+                            delete
+                        </i>
+                    </a>
+                </div>
+            </mat-card>
+        </ul>
+    </div>
+</div>
+<div class="modal" *ngIf="showModal; else elseBlock" (click)="toggleModal()">
+    <div class="content-modal">
+        <h1>Deseja deletar este usuário</h1>
+        <img  class="img" src="https://uploads5.wikiart.org/images/samuel-peploe.jpg!Portrait.jpg" alt="">
+        <h1>nome</h1>
+        <div class="modal-info-user">
+            <p>email: </p>
+            <p>telefone: </p>
+            <p>cpf: </p>
+            <p>saldo: </p>
+        </div>
+        <div class="actions-modal">
+            <button class="green" (click)="toggleModal()">Deletar</button>
+            <button class="red" (click)="toggleModal()">Cancel</button>
+        </div>
+    </div>
+</div>
+<ng-template #elseBlock>
+
+</ng-template>
+

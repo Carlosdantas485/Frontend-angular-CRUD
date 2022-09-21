@@ -1,0 +1,58 @@
+.navigate-content{
+    display: flex;
+}
+
+.nav-bar{
+    width: 200px;
+    background-color: rgb(1, 80, 133);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+
+}
+
+.nav-options{
+    display: flex;
+    flex-direction: column;
+
+}
+
+a{
+    width: 100%;
+    text-align: center;
+    margin-top: 5px ;
+    font-size: 1.3rem;
+    color: white;
+    text-decoration: none;
+}
+.view{
+    width: 100%;
+}
+
+.content-view{
+    margin: 10px;
+
+}
+
+.option{
+    width: 100%;
+    background-color: transparent;
+    color: white;
+}
+
+a:hover{
+    background-color: rgb(46, 104, 180);
+    transition: 0.5s;
+}
+
+
+/**/
+
+.access-denied{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

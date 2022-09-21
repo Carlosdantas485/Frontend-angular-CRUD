@@ -1,0 +1,18 @@
+.item-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.item-content{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.old-price{
+    text-decoration: line-through;
+    color: red;
+}
