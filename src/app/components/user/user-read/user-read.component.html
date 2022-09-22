@@ -2,56 +2,78 @@
     <div class="content-view">
         <h1>Usuários</h1>
         <a href="/users/create">
-            <button class="green">Novo Usuário</button>
+            <button class="green button">Novo Usuário</button>
         </a>
         <div class="search">
             <mat-form-field class="search-user-field">
-                <input class="search-user" matInput type="text" placeholder="Buscar por nome ">
+                <input class="search-user" placeholder="Buscar usuários" matInput [(ngModel)]="searchName" name="searchName">
             </mat-form-field>
         </div>
-        <ul class="user-list" *ngFor="let user of users">
-            <mat-card class="user-card">
-                <img class="img" src="{{user.url}}" alt="">
-                <div class="info-user-card">
-                    <p>{{user.userName}}</p>
-                    <p>{{user.phone}}</p>
-                    <p>{{user.cpf}}</p>
-                    <p>{{user.balance}}</p>
-                </div>
-                <div class="actios-user">
-                    <a routerLink="update/{{ user.id }}" class="edit">
+        <p>Resultados para: {{searchName}}</p>
+        <table mat-table [dataSource]="users">
+
+            <!-- Id Column -->
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef >Código</th>
+                <td mat-cell *matCellDef="let user">{{user.id}}</td>
+            </ng-container>
+      
+             <!-- img Column -->
+            <ng-container matColumnDef="url" >
+                <th mat-header-cell *matHeaderCellDef ></th>
+                <td mat-cell *matCellDef="let user">
+                    <img src="{{user.url}}" alt="" class="img">
+                </td>
+            </ng-container>
+        
+            <!-- Name Column -->
+            <ng-container matColumnDef="name" >
+              <th mat-header-cell *matHeaderCellDef >Name</th>
+              <td mat-cell *matCellDef="let user">{{user.userName}}</td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="cpf" >
+                <th mat-header-cell *matHeaderCellDef >CPF</th>
+                <td mat-cell *matCellDef="let user">{{user.cpf}}</td>
+            </ng-container>
+        
+            <!-- Banance Column -->
+            <ng-container matColumnDef="price" >
+                <th mat-header-cell *matHeaderCellDef >Saldo</th>
+                <td mat-cell *matCellDef="let user">
+                    <div class="directivTest">
+                        <!--This part show green if the banace is bigger then 0, else show balance red!--> 
+                        <div *ngIf="(user.price < 0)  ; else notRed">
+                            <p> {{user.balance | currency:'BRL'}}</p>
+                        </div>
+                        <ng-template #notRed >
+                            <p> {{user.balance | currency:'BRL'}} </p>
+                        </ng-template>
+                    </div>
+                </td>
+            </ng-container>
+
+            <!-- action Column -->
+            <ng-container matColumnDef="action" >
+                <th mat-header-cell *matHeaderCellDef >Ações</th>
+                <td mat-cell *matCellDef="let user">
+                    <button routerLink="update/{{ user.id }}" class="edit action button">
                         <i class="material-icons ">
                             edit
                         </i>
-                    </a>
-                    <a routerLink="delete/{{ user.id }}" class="delete">
+                    </button>
+                    <button (click)="delete(user.id)" class="delete action button">
                         <i class="material-icons delete">
                             delete
                         </i>
-                    </a>
-                </div>
-            </mat-card>
-        </ul>
+                    </button>
+                </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
     </div>
 </div>
-<div class="modal" *ngIf="showModal; else elseBlock" (click)="toggleModal()">
-    <div class="content-modal">
-        <h1>Deseja deletar este usuário</h1>
-        <img  class="img" src="https://uploads5.wikiart.org/images/samuel-peploe.jpg!Portrait.jpg" alt="">
-        <h1>nome</h1>
-        <div class="modal-info-user">
-            <p>email: </p>
-            <p>telefone: </p>
-            <p>cpf: </p>
-            <p>saldo: </p>
-        </div>
-        <div class="actions-modal">
-            <button class="green" (click)="toggleModal()">Deletar</button>
-            <button class="red" (click)="toggleModal()">Cancel</button>
-        </div>
-    </div>
-</div>
-<ng-template #elseBlock>
 
-</ng-template>
 

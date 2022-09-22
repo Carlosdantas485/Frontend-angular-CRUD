@@ -31,7 +31,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
+import { MatMenuModule } from '@angular/material/menu';
 
 
 @NgModule({
@@ -64,7 +64,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatSortModule,
     MatInputModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatMenuModule
 
   ],
   providers: [],

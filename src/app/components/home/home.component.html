@@ -1,17 +1,20 @@
 <div class="view">
     <div class="content-view">
         <h1>Home</h1>
-        <div class="item-list">
-            <mat-card class="item-content">
-                
-                <img class="img" src="https://www.iplace.com.br/ccstore/v1/images/?source=/file/v3475483175970887300/products/220842.00-apple-iphone-13-128gb-meianoite-mlpf3br-a.jpg&height=470&width=470&height=470&width=470&quality=0.8" alt="">
-                <p>Carlos Dantas</p>
-                <p class="v">R$ 20.0000,00</p>
-                <button mat-raised-button color="primary" >Adicionar</button>
-                <div class="action-user">
-                    <button>...</button>                
+        <div class="view-home">
+            <mat-card class="user-card" *ngFor="let user of users" >
+                <div class="box-menu-user">
+                        <button mat-flat-button class="btn-menu-user" [matMenuTriggerFor]="appMenu">...</button>
+                        <mat-menu #appMenu="matMenu" class="options-menu-user">
+                            <button mat-menu-item >Visitar perfil</button>
+                            <button mat-menu-item >Mais informações</button>
+                        </mat-menu>
                 </div>
-            </mat-card>
+            
+                <img class="img" src="{{user.url}}" alt="">
+                <p>{{user.userName}}</p>
+                    <button mat-raised-button color="primary">Seguir</button>
+            </mat-card >
         </div>
     </div>
    

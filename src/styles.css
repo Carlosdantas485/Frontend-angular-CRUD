@@ -5,20 +5,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
-button{
-    width: 150px;
-    height: 40px;
-    border: none;
-    font-weight: bold;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-}
 
-button:hover{
-    transform: scale(1.02);
-    transition: 0.5s;
-}
 .green{
     background-color: #7AC73C;
     color: white;
@@ -30,10 +17,26 @@ button:hover{
 
 }
 
+.button{
+    width: 150px;
+    height: 40px;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.button:hover{
+    transform: scale(1.02);
+    transition: 0.5s;
+}
+
 .view{
     display: flex;
     flex-direction: column;
     min-height: 90vh;
+    width: 100%;
 }
 
 .content-view{
@@ -44,11 +47,18 @@ button:hover{
 }
 
 .img{
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    border: 5px solid #015085;
-    padding: 2px;
+    border: 3px solid #015085;
+    padding: 3px;
+    margin: 10px;
+}
+
+.action{
+    width: 50px;
+    margin: 5px;
+    background-color: transparent;
 }
 
 .form{

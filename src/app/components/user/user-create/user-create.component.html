@@ -1,6 +1,6 @@
 <div class="view">
     <mat-card class="content-view">
-        <mat-card-title>Atualizar usuário</mat-card-title>
+        <mat-card-title>Criar usuário</mat-card-title>
        
         <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="form" action="">
             <mat-form-field>
@@ -29,8 +29,8 @@
             </mat-form-field>
 
             <div class="options-to-create">
-                <button mat-raised-button color="primary" type="submit" [disabled]="!profileForm.valid">Enviar</button>
-                <button mat-raised-button color="warn">cancelar</button>
+                <button mat-raised-button color="primary" type="submit" [disabled]="!profileForm.valid" class="button">Enviar</button>
+                <button mat-raised-button color="warn" class="button">cancelar</button>
             </div>
         </form>
     </mat-card>

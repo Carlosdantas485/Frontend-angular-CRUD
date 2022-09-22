@@ -18,6 +18,9 @@ export class UserUpdateComponent implements OnInit {
   user: Users = {
     userName:"",
     password:"",
+    rePassword: "",
+    cpf: null,
+    phone: null,
     balance:null,
     url:""
   }

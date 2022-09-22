@@ -1,11 +1,10 @@
 <div class="view">
-
     <div class="content-view">
         <mat-card-title>
             Alterar Usuário
         </mat-card-title>
         <mat-card class="card-user">
-            <img #nophoto src="{{user.url}}" alt="" class="img-user">
+            <img #nophoto src="{{user.url}}" alt="" class="img-user img">
             <div>
                 <p>Nome:{{user.userName}}</p>
                 <p>CPF:{{user.cpf}}</p>
@@ -36,14 +35,11 @@
                 <input matInput placeholder="(URL) Foto" [(ngModel)]="user.url" name="url">
             </mat-form-field>
             <div class="options-to-update">
-                <button  mat-raised-button (click)="update()" color="primary">Confirmar</button>
-                <button mat-raised-button (click)="cancel()" color="warn">Cancelar</button>
+                <button mat-raised-button (click)="update()" color="primary button">Confirmar</button>
+                <button mat-raised-button (click)="cancel()" color="warn button">Cancelar</button>
             </div>
-            
         </form>
-            
     </div>
-    
 </div>
 
 

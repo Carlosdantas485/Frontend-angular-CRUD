@@ -1,7 +1,6 @@
 import { UserService } from './../user.service';
 import { Component, OnInit } from '@angular/core';
 import { Users } from '../user.model';
-
 @Component({
   selector: 'app-user-read',
   templateUrl: './user-read.component.html',
@@ -11,7 +10,13 @@ import { Users } from '../user.model';
 export class UserReadComponent implements OnInit {
   showModal = false;
   users!: Users[];
-  constructor(private userService: UserService) { }
+  searchName!:  string;
+
+  displayedColumns = ['id','url', 'name','cpf', 'price', 'action']
+
+  constructor(
+    private userService: UserService,
+  ) { }
 
   ngOnInit(): void {
     this.showUsers();
@@ -31,4 +36,12 @@ export class UserReadComponent implements OnInit {
       this.users = user;
     })
   }
+
+  delete(id: any): void{
+    this.userService.deleteUser(id).subscribe(user => {
+      this.showUsers();
+    })
+  }
+
+
 }
