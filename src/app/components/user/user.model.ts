@@ -1,3 +1,5 @@
+import { Post } from './post.model';
+
 export interface Users{
     id?: number | null
     userName?: string | null
@@ -6,5 +8,6 @@ export interface Users{
     cpf?: number | null
     phone?: number | null
     balance?: number | null
-    url?: string | null
+    url?: string | null,
+    post?:[Post]
 }

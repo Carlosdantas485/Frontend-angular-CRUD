@@ -1,0 +1,43 @@
+<div class="view-profile">
+    <div class="content-view">
+        <mat-card class="mat-card">
+            <img src="https://www.balmerlawrie.com/img/main_images/inside_banner/travel-banner1.jpg" alt="" class="user-banner">
+            <div class="user-infos">
+                <img src="{{user.url}}" alt="" class="img">
+                <mat-card-title>
+                    <p>{{user.userName}}</p>
+                </mat-card-title>
+            </div>
+            <mat-card>
+                <mat-card-title>
+                    <p>Criar um post</p>
+                </mat-card-title>
+                <input type="text" placeholder="No que você está pensando ?">
+            </mat-card>
+            <mat-card class="post-card" *ngFor="let post of user.post">
+                <h1>{{post.title}}</h1>
+                <p>{{post.content}}</p>
+                <button class="cursor like">
+                    <i matBadge="{{post.likes}}" class="material-icons" >
+                        favorite
+                    </i>
+                </button>
+                <mat-card class="coment" *ngFor="let coment of post.coments">
+                    <p >{{coment.content}}</p>
+                    <button class="cursor like">
+                        <i matBadge="5" class="material-icons" >
+                            favorite
+                        </i>
+                    </button>
+                </mat-card>
+                <div>
+                    <textarea id="msg" name="msg" rows="4" cols="50"></textarea>
+                    <button>Enviar</button>
+                </div>
+            </mat-card>
+        </mat-card>
+        
+    </div>
+</div>
+
+

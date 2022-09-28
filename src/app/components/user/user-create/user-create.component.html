@@ -30,9 +30,15 @@
 
             <div class="options-to-create">
                 <button mat-raised-button color="primary" type="submit" [disabled]="!profileForm.valid" class="button">Enviar</button>
-                <button mat-raised-button color="warn" class="button">cancelar</button>
+                <button mat-raised-button color="warn" (click)="cancel()"class="button">cancelar</button>
             </div>
         </form>
+        <div class="form-group">
+            <label for="college">Tipo de conta:</label>
+            <select class="form-control" id="college" ngModel name="college_name" required >
+              <option *ngFor="let option of option" value="{{option}}">{{option}}</option>
+            </select>
+        </div>
     </mat-card>
    
 </div>

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder  } from '@angular/forms';
-import { Validators } from '@angular/forms';
-
+import { FormBuilder, FormControl  } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,15 +11,22 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   data: any;
-  
-  profileForm = this.fb.group({
-    userName: ['', Validators.required],
-    password: ['', Validators.required],
-  });
 
-  constructor(private fb: FormBuilder, private router: Router) { }
+  formulario!: FormGroup;
+
+  constructor( private router: Router, private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+
+    this.formulario = new FormGroup({
+      nameHeader: new FormControl(null),
+      emailHeader: new FormControl(null)
+    });
+
+    this.formulario = this.formBuilder.group({
+      nameHeader: [null],
+      emailHeader: [null]
+    });
   }
 
   loginUser(): void{
@@ -35,4 +41,7 @@ export class LoginComponent implements OnInit {
     console.log(localStorage.getItem("username"));
 
   }
+
+
+ 
 }

@@ -1,4 +1,3 @@
-
 button{
     width: auto;
     height: auto;
@@ -7,6 +6,8 @@ button{
 .view-home{
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .box-menu-user{
@@ -33,3 +34,4 @@ button{
 .btn-menu-user{
     width: 10px;
 }
+

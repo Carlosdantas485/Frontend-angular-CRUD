@@ -30,9 +30,10 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatBadgeModule } from '@angular/material/badge';
 
 import { MatMenuModule } from '@angular/material/menu';
-
+import { UserProfileComponent } from './components/user/user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { MatMenuModule } from '@angular/material/menu';
     UserReadComponent,
     HeaderComponent,
     FooterComponent,
-    NavComponent
+    NavComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -65,7 +67,8 @@ import { MatMenuModule } from '@angular/material/menu';
     MatInputModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MatMenuModule
+    MatMenuModule,
+    MatBadgeModule,
 
   ],
   providers: [],

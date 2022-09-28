@@ -12,8 +12,9 @@ import { Validators } from '@angular/forms';
 })
 export class UserCreateComponent implements OnInit {
   hide = true;
-  
   data: any;
+
+  option = ["ADM", "USER", "SHOP"];
   
   profileForm = this.fb.group({
     userName: ['', Validators.required],
@@ -24,7 +25,10 @@ export class UserCreateComponent implements OnInit {
     balance: ['', Validators.required],
     url: ['', Validators.required],
   });
-  constructor(public userService: UserService, private router: Router, private fb: FormBuilder) { }
+  constructor(
+    public userService: UserService,
+     private router: Router, 
+     private fb: FormBuilder) { }
 
   ngOnInit(): void {
   }
@@ -37,5 +41,9 @@ export class UserCreateComponent implements OnInit {
       this.userService.showMesage('Usuário criado com sucesso!')
       this.router.navigate(['/users'])
     })
+  }
+
+  cancel(){
+    this.router.navigate(['/users'])
   }
 }

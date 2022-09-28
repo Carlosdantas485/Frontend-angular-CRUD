@@ -20,6 +20,7 @@ export class UserReadComponent implements OnInit {
 
   ngOnInit(): void {
     this.showUsers();
+   
   }
 
   toggleModal(){
@@ -40,8 +41,10 @@ export class UserReadComponent implements OnInit {
   delete(id: any): void{
     this.userService.deleteUser(id).subscribe(user => {
       this.showUsers();
+      this.userService.showMesage("Usuário deletado com sucesso !");
     })
   }
+
 
 
 }

@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { AppComponent } from 'src/app/app.component';
+import { MatMenuTrigger } from '@angular/material/menu';
 
 @Component({
   selector: 'app-header',
@@ -8,11 +11,21 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   loginValid =true;
   id = "1";
-  userName =  "Carlosdantas@gamil.com";
+  userName!: string;
+  
+  @ViewChild(MatMenuTrigger) trigger!: MatMenuTrigger;
 
-  constructor() { }
+ 
+  constructor(private appComponent: AppComponent, private router: Router, ) { }
 
   ngOnInit(): void {
+    this.userName = this.appComponent.title;
   }
 
+  someMethod() {
+    this.trigger.openMenu();
+  }
+  loginPage(){
+    this.router.navigate(['/'])
+  }
 }
