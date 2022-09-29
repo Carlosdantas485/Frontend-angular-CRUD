@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs';
+import { finalize, Observable, tap } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -9,7 +9,7 @@ import { URL_API } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class UserService {
-
+  loading = false;
   constructor(private snackBar: MatSnackBar,private http: HttpClient) { }
 
   showMesage(msg: string):void{
@@ -22,6 +22,7 @@ export class UserService {
 
   //definir o metodo com Observable 
   listUsers():Observable<Users[]>{
+    this.loading = true;
     //retorna a requisicao no endpoint fornecido
     return this.http.get<Users[]>(`${URL_API}users`)
   }

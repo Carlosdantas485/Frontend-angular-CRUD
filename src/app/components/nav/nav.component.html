@@ -12,13 +12,12 @@
                         Usuários
                </button>
         </a>
-            
     </div>
     <div class="view" *ngIf="loginValid; else loginNotValid">
         <router-outlet ></router-outlet>
     </div>
 
-    <ng-template #loginNotValid>
+    <ng-template #loginNotValid  >
         <div class="access-denied">
             <app-login>
             </app-login>

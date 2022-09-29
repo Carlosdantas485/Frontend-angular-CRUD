@@ -31,7 +31,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatBadgeModule } from '@angular/material/badge';
-
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { MatMenuModule } from '@angular/material/menu';
 import { UserProfileComponent } from './components/user/user-profile/user-profile.component';
 
@@ -69,6 +69,7 @@ import { UserProfileComponent } from './components/user/user-profile/user-profil
     HttpClientModule,
     MatMenuModule,
     MatBadgeModule,
+    MatProgressSpinnerModule
 
   ],
   providers: [],

@@ -3,18 +3,18 @@
     padding: 0;
     outline: none;
     font-family: 'Roboto', sans-serif;
+    text-decoration: none;
 }
 
 
 .green{
-    background-color: #7AC73C;
+    background-color: #0AA16D;
     color: white;
 }
 
 .red{
     background-color: rgb(243, 102, 102);
     color: white;
-
 }
 
 .button{
@@ -76,5 +76,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .like{
     background-color: transparent;
     border: none;
-    color: red;
+    color: rgb(13, 109, 253);
+}
+
+.banner{
+    width: 100%;
+}
+
+.textarea{
+    border: 1px solid rgb(202, 202, 202);
+    padding: 5px;
 }

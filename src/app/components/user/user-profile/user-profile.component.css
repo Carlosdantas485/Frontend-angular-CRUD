@@ -5,7 +5,7 @@
 }
 
 .user-banner{
-    width: 100%;
+    max-width: 100%;
     min-height: 25%;
 }
 
@@ -16,18 +16,22 @@
 
 .post-card{
     margin: 5px 0;
-    background-color: #015085;
-    color: white;
     padding: 10px;
     display: flex;
     flex-direction: column;
+    border: 1px solid rgb(180, 180, 180);
 }
 
 .coment{
-    background-color: #5d9ac2;
-    color: white;
+    border: 1px solid rgb(180, 180, 180);
     margin-bottom: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.like{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
 }

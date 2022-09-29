@@ -8,30 +8,32 @@
                     <p>{{user.userName}}</p>
                 </mat-card-title>
             </div>
-            <mat-card>
+            <mat-card class="post-card">
                 <mat-card-title>
                     <p>Criar um post</p>
                 </mat-card-title>
-                <input type="text" placeholder="No que você está pensando ?">
+                <textarea class="textarea" id="msg" name="msg" rows="4" cols="50" placeholder="No que você esta pensado ?"></textarea>
             </mat-card>
             <mat-card class="post-card" *ngFor="let post of user.post">
                 <h1>{{post.title}}</h1>
                 <p>{{post.content}}</p>
                 <button class="cursor like">
-                    <i matBadge="{{post.likes}}" class="material-icons" >
-                        favorite
+                    <i class="material-icons" >
+                        thumb_up_alt
                     </i>
+                    {{post.likes}}
                 </button>
                 <mat-card class="coment" *ngFor="let coment of post.coments">
                     <p >{{coment.content}}</p>
                     <button class="cursor like">
-                        <i matBadge="5" class="material-icons" >
-                            favorite
+                        <i class="material-icons" >
+                            thumb_up_alt
                         </i>
+                        1000
                     </button>
                 </mat-card>
                 <div>
-                    <textarea id="msg" name="msg" rows="4" cols="50"></textarea>
+                    <input type="text" placeholder="Comentar">
                     <button>Enviar</button>
                 </div>
             </mat-card>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../user/user.service';
 
 @Component({
   selector: 'app-nav',
@@ -7,14 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
   loginValid = true;
-  constructor() { }
+
+  constructor(public userService: UserService) { }
 
   ngOnInit(): void {
   }
-
-  showNavBar(){
-
-  }
-  
 
 }
