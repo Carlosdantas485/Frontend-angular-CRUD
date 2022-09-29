@@ -1,8 +1,3 @@
-button{
-    width: auto;
-    height: auto;
-}
-
 .view-home{
     display: flex;
     flex-wrap: wrap;
@@ -11,7 +6,6 @@ button{
 }
 
 .box-menu-user{
-    width: 100%;
     display: flex;
     justify-content: flex-end;
 }

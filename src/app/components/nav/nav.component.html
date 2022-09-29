@@ -1,26 +1,23 @@
-
 <div class="navigate-content">
-    <div class="nav-bar">
-            
-        <a  href="/home">      
-               <button class="option button">
-                        Home
-               </button>
-        </a>
-        <a  href="/users">
-              <button class="option button">
-                        Usuários
-               </button>
-        </a>
-    </div>
-    <div class="view" *ngIf="loginValid; else loginNotValid">
-        <router-outlet ></router-outlet>
-    </div>
 
-    <ng-template #loginNotValid  >
-        <div class="access-denied">
-            <app-login>
-            </app-login>
+    <div *ngIf="!loginValid; else loginNotValid">
+        <app-login></app-login>
+    </div>
+    <ng-template #loginNotValid >
+        <div class="nav-bar">
+            <a  href="/home">      
+                <button class="option button">
+                        Home
+                </button>
+            </a>
+            <a  href="/users">
+                <button class="option button">
+                        Usuários
+                </button>
+            </a>
+        </div>
+        <div class="content-nav" >
+            <router-outlet ></router-outlet>
         </div>
     </ng-template>
 </div>

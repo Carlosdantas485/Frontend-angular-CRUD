@@ -1,9 +1,12 @@
+.navigate-content{
+    width: 100%;
+    
+}
+
 .login-content{
     width: 100%;
     min-height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
 }
 
 .form-login{
@@ -12,9 +15,18 @@
     height: 300px;
     display: flex;
     flex-direction: column;
-    background-color: rgb(221, 221, 221);
+    background-color: rgb(255, 255, 255);
     padding: 10px;
     align-items: center;
     justify-content: center;
 }
 
+.erro-login{
+    color: red;
+    text-decoration: underline;
+}
+
+
+.login-content{
+
+}

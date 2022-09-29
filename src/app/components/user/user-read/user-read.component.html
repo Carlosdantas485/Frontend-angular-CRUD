@@ -53,7 +53,7 @@
                     </div>
                 </td>
             </ng-container>
-            
+
             <!-- action Column -->
             <ng-container matColumnDef="action" >
                 <th mat-header-cell *matHeaderCellDef >Ações</th>
@@ -63,7 +63,7 @@
                             edit
                         </i>
                     </button>
-                    <button (click)="delete(user.id)" class="delete action button">
+                    <button (click)="setIdDelete(user.id)" class="delete action button">
                         <i class="material-icons delete">
                             delete
                         </i>
@@ -73,6 +73,16 @@
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         </table>
+    </div>
+</div>
+
+<div class="modal" *ngIf="showModal" (click)="toggleModal()">
+    <div class="card-modal" >
+        <h1>Deseja realmente deletar este usuário ?</h1>
+        <div class="actions-modal">
+            <button class=" button red" (click)="delete()">Sim</button>
+            <button class=" button green" (click)="toggleModal()">Não</button>
+        </div>
     </div>
 </div>
 

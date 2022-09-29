@@ -32,13 +32,6 @@
     transition: 0.5s;
 }
 
-.view{
-    display: flex;
-    flex-direction: column;
-    min-height: 90vh;
-    width: 100%;
-}
-
 .content-view{
     margin: 20px;
     display: flex;
@@ -54,20 +47,11 @@
     margin: 10px;
 }
 
-.action{
-    width: 50px;
-    margin: 5px;
-    background-color: transparent;
-}
-
 .form{
     margin: 10px 0;
     display: flex;
     flex-direction: column;
 }
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .cursor{
     cursor: pointer;
@@ -87,3 +71,4 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     border: 1px solid rgb(202, 202, 202);
     padding: 5px;
 }
+

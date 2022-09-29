@@ -11,37 +11,33 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   data: any;
-
+  username!: string; 
+  password!: string;
+  loginValid =  false;
   formulario!: FormGroup;
 
   constructor( private router: Router, private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
-
-    this.formulario = new FormGroup({
-      nameHeader: new FormControl(null),
-      emailHeader: new FormControl(null)
-    });
-
-    this.formulario = this.formBuilder.group({
-      nameHeader: [null],
-      emailHeader: [null]
-    });
-  }
-
-  loginUser(): void{
-    
     this.router.navigate(['/home'])
-    console.log(localStorage.setItem("username", "carlos"));
   }
-
 
   clear(){
     localStorage.clear()
-    console.log(localStorage.getItem("username"));
-
   }
 
+  salvar(){
+    if(this.username == "carlosdantas485@gmail.com" && this.password == "Carlos@100"){
+      localStorage.setItem("token", "987654321");
+      location.reload();
+    }else{
+      this.loginValid = true;
+    }
+    this.router.navigate(['/home'])
+
+    console.log("passou")
+    
+  }
 
  
 }

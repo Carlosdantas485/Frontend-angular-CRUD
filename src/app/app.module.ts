@@ -35,6 +35,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { MatMenuModule } from '@angular/material/menu';
 import { UserProfileComponent } from './components/user/user-profile/user-profile.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

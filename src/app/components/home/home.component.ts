@@ -26,7 +26,6 @@ export class HomeComponent implements OnInit {
   showUsers():void{
     this.userService.listUsers().subscribe(user=>{
       this.users = user;
-      console.log(this.users);
     })
   }
   visitProfile(id: number){

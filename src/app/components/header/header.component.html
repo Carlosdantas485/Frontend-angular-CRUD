@@ -1,12 +1,15 @@
 <div class="header-content">
     <h1>CRUD COMPLETO</h1>
     <div class="user-reader" *ngIf="loginValid; else loginNotValid">
+        <i matBadge="15" matBadgeColor="warn" class="material-icons cursor chart" >
+            shopping_cart
+        </i>
         <img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVcnWgn3s6Z_ZzIX59q7YdvcSq11QeotrmLw&usqp=CAU" alt="" class="img-people">
         
         <div class="info-user-header">
             <p>{{userName}}</p>
         </div>
-        <div class="notifications">
+        <div class="actions-header">
             <mat-icon matBadge="15" class="cursor" matBadgeColor="warn">
                 <i class="material-icons" [matMenuTriggerFor]="notfMenu">
                     notifications
@@ -27,16 +30,15 @@
                     <button mat-menu-item >Mais informações</button>
                 </mat-menu>
             </mat-icon>
+            
             <i class="material-icons cursor" >
                 settings
             </i>
-            <i class="material-icons cursor" >
-                settings
-            </i>
+            <a href="">
+                <button class="btn-exit" (click)="exit()">Sair</button>
+            </a>
         </div>
-        <a href="">
-            <button class="btn-exit">Sair</button>
-        </a>
+        
     </div>
     <ng-template #loginNotValid>
        <button class="button" (click)="loginPage()">LOGIN</button>

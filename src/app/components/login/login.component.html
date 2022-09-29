@@ -1,15 +1,22 @@
 <div class="login-content">
-    <form class="form-login" (ngSubmit)="loginUser()">
+    <form class="form-login" >
         <mat-card-title>
             <h1>Login</h1>
         </mat-card-title>
         <mat-form-field>
-            <input matInput name="userName" placeholder="Usuário">
+            <input matInput name="userName" [(ngModel)]="username" placeholder="Usuário">
         </mat-form-field>
         <mat-form-field>
-            <input matInput type="text" placeholder="Senha">
+            <input matInput name="password" type="text" [(ngModel)]="password" placeholder="Senha">
         </mat-form-field>
-        <button class="green button" type="submit">Save</button>
+        <div *ngIf="loginValid; else loginNotValid">
+            <h1 class="erro-login">login invalido</h1>
+        </div>
+
+        <ng-template #loginNotValid>
+        </ng-template>
+        <button class="green button" type="submit" (click)="salvar()">Save</button>
+        <button class="red button" type="submit">Cadastre-se</button>
     </form>
 </div>
     

@@ -25,7 +25,13 @@ export class HeaderComponent implements OnInit {
   someMethod() {
     this.trigger.openMenu();
   }
+
   loginPage(){
+    this.router.navigate(['/'])
+  }
+
+  exit(){
+    localStorage.clear()
     this.router.navigate(['/'])
   }
 }

@@ -7,11 +7,21 @@ import { UserService } from '../user/user.service';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-  loginValid = true;
+  loginValid = false ;
+
+  token = localStorage.getItem("token")?.toString;
+    
 
   constructor(public userService: UserService) { }
 
   ngOnInit(): void {
+    
+    let token = localStorage.getItem("token");
+
+    if(token === "987654321" ){
+      this.loginValid = true
+    }
+
   }
 
 }

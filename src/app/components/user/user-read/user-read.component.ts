@@ -11,6 +11,7 @@ export class UserReadComponent implements OnInit {
   showModal = false;
   users!: Users[];
   searchName!:  string;
+  idDelet!: number;
 
   displayedColumns = ['id','url', 'name','cpf', 'price', 'action']
 
@@ -21,6 +22,11 @@ export class UserReadComponent implements OnInit {
   ngOnInit(): void {
     this.showUsers();
    
+  }
+
+  setIdDelete(id:number){
+    this.idDelet = id;
+    this.toggleModal()
   }
 
   toggleModal(){
@@ -38,13 +44,12 @@ export class UserReadComponent implements OnInit {
     })
   }
 
-  delete(id: any): void{
-    this.userService.deleteUser(id).subscribe(user => {
+  delete(): void{
+    this.userService.deleteUser(this.idDelet).subscribe(user => {
       this.showUsers();
       this.userService.showMesage("Usuário deletado com sucesso !");
     })
   }
-
 
 
 }
