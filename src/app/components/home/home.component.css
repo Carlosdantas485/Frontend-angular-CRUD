@@ -12,6 +12,7 @@
 }
 
 .box-menu-user{
+    width: 100%;
     display: flex;
     justify-content: flex-end;
 }
