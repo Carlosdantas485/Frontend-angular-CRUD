@@ -1,3 +1,7 @@
+mat-form-field{
+    width: 100%;
+}
+
 .navigate-content{
     width: 100%;
     
@@ -21,12 +25,19 @@
     justify-content: center;
 }
 
+.try-login{
+    margin-top: 10px;
+    text-decoration: underline;
+}
+
 .erro-login{
+    margin-top: 10px;
     color: red;
     text-decoration: underline;
 }
 
-
-.login-content{
-
+.actions-login{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }

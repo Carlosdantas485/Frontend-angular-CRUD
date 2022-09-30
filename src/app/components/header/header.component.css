@@ -76,10 +76,11 @@ a{
     border-radius: 5px;
     width: 70px;
     height: 30px;
+    cursor: pointer;
 }
 
-
 /*========== Responsivo ===========*/
+
 @media (max-width: 720px){
     .header-content{
         display: flex;

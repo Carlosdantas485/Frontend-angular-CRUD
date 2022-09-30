@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
   @ViewChild(MatMenuTrigger) trigger!: MatMenuTrigger;
 
  
-  constructor(private appComponent: AppComponent, private router: Router, ) { }
+  constructor(private appComponent: AppComponent, private router: Router) { }
 
   ngOnInit(): void {
     this.userName = this.appComponent.title;

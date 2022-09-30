@@ -1,11 +1,11 @@
 <div class="navigate-content">
 
-    <div *ngIf="!loginValid; else loginNotValid">
+    <div class="login-page" *ngIf="!loginValid; else loginNotValid">
         <app-login></app-login>
     </div>
     <ng-template #loginNotValid >
         <div class="nav-bar">
-            <a  href="/home">      
+            <a href="/home">      
                 <button class="option button">
                         Home
                 </button>
@@ -18,6 +18,61 @@
         </div>
         <div class="content-nav" >
             <router-outlet ></router-outlet>
+           
         </div>
+        <mat-card class="home-post">
+            <mat-card-title>
+               Lembretes de hoje
+            </mat-card-title>
+            <mat-card class="card-task">
+                <div class="task"> 
+                    <p>Cortar grama</p>
+                    <p>20/05/2022</p>
+                    <p>Feito</p>
+                </div>
+            </mat-card>
+             <mat-card class="card-task">
+                <div class="task"> 
+                    <p>Cortar grama</p>
+                    <p>20/05/2022</p>
+                    <p>Feito</p>
+                </div>
+            </mat-card>
+            <mat-card class="card-task">
+                <div class="task"> 
+                    <p>Cortar grama</p>
+                    <p>20/05/2022</p>
+                    <p>Feito</p>
+                </div>
+            </mat-card>
+            <mat-card class="card-task">
+                <div class="task"> 
+                    <p>Cortar grama</p>
+                    <p>20/05/2022</p>
+                    <p>Feito</p>
+                </div>
+            </mat-card>
+            <mat-card class="card-task">
+                <div class="task"> 
+                    <p>Cortar grama</p>
+                    <p>20/05/2022</p>
+                    <p>Feito</p>
+                </div>
+            </mat-card>
+            <mat-card class="card-task">
+                <div class="task"> 
+                    <p>Cortar grama</p>
+                    <p>20/05/2022</p>
+                    <p>Feito</p>
+                </div>
+            </mat-card>
+            <mat-card class="card-task">
+                <div class="task"> 
+                    <p>Cortar grama</p>
+                    <p>20/05/2022</p>
+                    <p>Feito</p>
+                </div>
+            </mat-card>
+        </mat-card>
     </ng-template>
 </div>

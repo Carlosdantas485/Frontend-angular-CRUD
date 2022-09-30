@@ -1,8 +1,11 @@
 <div class="view">
+    
     <div class="content-view">
         <h1>Home</h1>
         <img class="banner" src="https://marketplace.canva.com/EAFHlDU4Ub8/1/0/1600w/canva-purple-navy-education-dynamic-shapes-and-frames-linkedin-banner-8jSrj4AQ6HU.jpg" alt="">
+       
         <div class="view-home">
+            
             <mat-card class="user-card" *ngFor="let user of users" >
                 <div class="box-menu-user">
                     <button mat-flat-button class="btn-menu-user" [matMenuTriggerFor]="appMenu">...</button>
@@ -20,7 +23,9 @@
                 </a>
             </mat-card >
         </div>
+       
         
     </div>
+    
    
 </div>

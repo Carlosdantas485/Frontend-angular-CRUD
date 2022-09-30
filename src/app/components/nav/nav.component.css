@@ -44,3 +44,30 @@ a:hover{
 .access-denied{
     width: 100%;
 }
+
+.login-page{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-post{
+    margin: 20px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #0BA373;
+}
+
+
+/*============ Task ============*/
+.card-task{
+    margin-top: 10px;
+}
+
+.task{
+    display: flex;
+    justify-content: space-between;
+}

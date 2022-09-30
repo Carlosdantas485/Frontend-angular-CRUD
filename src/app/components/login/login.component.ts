@@ -16,6 +16,8 @@ export class LoginComponent implements OnInit {
   loginValid =  false;
   formulario!: FormGroup;
 
+  title = "CarlosDAnats"
+
   constructor( private router: Router, private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
